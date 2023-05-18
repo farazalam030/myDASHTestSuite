@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log>
+    <misc_1>
+        <cmd> 
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication createfilter CQL SELECT * FROM CIM_AlertIndication
+        </cmd>
+        <data>
+Error: Creating indicaton filter
+Error: CIM Error : wsman:InvalidSelectors
+        </data>
+    </misc_1>
+    <misc_2>
+        <cmd> 
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication createdestination http://192.168.0.101:8080/eventsink
+        </cmd>
+        <data>
+Error: Creating alert destination
+Error: CIM Error : wsen:CannotProcessFilter
+        </data>
+    </misc_2>
+    <misc_3>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication staticsubscribe http://192.168.0.101:8080/eventsink push 0 1
+        </cmd>
+        <data>
+Error : Filter instance 1 not found
+        </data>
+    </misc_3>
+    <misc_5>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication collectionsubscribe http://192.168.1.101:8080/eventsink push 0 1
+        </cmd>
+        <data>
+Indication subscription created successfully
+        </data>
+    </misc_5>
+    <misc_6>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+        </cmd>
+        <data>
+Filter Name                  : DMTF:HW
+Destination                  : http://192.168.1.101:8080/eventsink
+On Fatal Error Policy        : Remove
+Other On Fatal Error Policy  : N/A
+Failure Trigger Time Interval: 0
+Subscription State           : Enabled
+Other Subscription State     : N/A
+Repeat Notification Policy   : None
+Repeat Notification Interval : N/A
+Repeat Notification Gap      : N/A
+Repeat Notification Count    : N/A
+        </data>
+    </misc_6>
+    <misc_7>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] renew 2013-01-07T03:17:31-06:00
+        </cmd>
+        <data>
+Error code - 300, retrying ...
+Indication subscription renewed Successfully
+        </data>
+    </misc_7>
+    <misc_8>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+        </cmd>
+        <data>
+Filter Name                  : DMTF:HW
+Destination                  : http://192.168.1.101:8080/eventsink
+On Fatal Error Policy        : Remove
+Other On Fatal Error Policy  : N/A
+Failure Trigger Time Interval: 0
+Subscription State           : Enabled
+Other Subscription State     : N/A
+Repeat Notification Policy   : None
+Repeat Notification Interval : N/A
+Repeat Notification Gap      : N/A
+Repeat Notification Count    : N/A
+        </data>
+    </misc_8>
+    <misc_9>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] unsubscribe
+        </cmd>
+        <data>
+     UnSubscribed Successfully
+        </data>
+    </misc_9>
+    <misc_10>
+        <cmd>  
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+        </cmd>
+        <data>
+Error: No matching instance found in 'indicationsubscription[0]'
+        </data>
+    </misc_10>
+</log>
