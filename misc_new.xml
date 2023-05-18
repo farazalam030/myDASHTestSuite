@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <log>
-    <misc_1>
+<misc>
         <cmd> 
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication createfilter CQL SELECT * FROM CIM_AlertIndication
         </cmd>
@@ -8,8 +8,8 @@ dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P R
 Error: Creating indicaton filter
 Error: CIM Error : wsman:InvalidSelectors
         </data>
-    </misc_1>
-    <misc_2>
+</misc>
+<misc>
         <cmd> 
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication createdestination http://192.168.0.101:8080/eventsink
         </cmd>
@@ -17,24 +17,24 @@ dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P R
 Error: Creating alert destination
 Error: CIM Error : wsen:CannotProcessFilter
         </data>
-    </misc_2>
-    <misc_3>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication staticsubscribe http://192.168.0.101:8080/eventsink push 0 1
         </cmd>
         <data>
 Error : Filter instance 1 not found
         </data>
-    </misc_3>
-    <misc_5>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication collectionsubscribe http://192.168.1.101:8080/eventsink push 0 1
         </cmd>
         <data>
 Indication subscription created successfully
         </data>
-    </misc_5>
-    <misc_6>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
         </cmd>
@@ -51,8 +51,8 @@ Repeat Notification Interval : N/A
 Repeat Notification Gap      : N/A
 Repeat Notification Count    : N/A
         </data>
-    </misc_6>
-    <misc_7>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] renew 2013-01-07T03:17:31-06:00
         </cmd>
@@ -60,8 +60,8 @@ dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P R
 Error code - 300, retrying ...
 Indication subscription renewed Successfully
         </data>
-    </misc_7>
-    <misc_8>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
         </cmd>
@@ -78,21 +78,21 @@ Repeat Notification Interval : N/A
 Repeat Notification Gap      : N/A
 Repeat Notification Count    : N/A
         </data>
-    </misc_8>
-    <misc_9>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] unsubscribe
         </cmd>
         <data>
      UnSubscribed Successfully
         </data>
-    </misc_9>
-    <misc_10>
+</misc>
+<misc>
         <cmd>  
 dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
         </cmd>
         <data>
 Error: No matching instance found in 'indicationsubscription[0]'
         </data>
-    </misc_10>
+</misc>
 </log>
