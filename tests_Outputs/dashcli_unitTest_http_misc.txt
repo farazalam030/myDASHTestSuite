@@ -1,0 +1,1248 @@
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication createfilter CQL SELECT * FROM CIM_AlertIndication
+
+Error: Creating indicaton filter
+Error: CIM Error : wsman:InvalidSelectors
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication createdestination http://192.168.0.101:8080/eventsink
+
+Error: Creating alert destination
+Error: CIM Error : wsen:CannotProcessFilter
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication staticsubscribe http://192.168.0.101:8080/eventsink push 0 1
+
+Error : Filter instance 1 not found
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication dynamicsubscribe http://192.168.1.101:80
+
+Error: Invalid options for subscription
+Subscribes for events using dynamic filter 
+Usage: dashcli -h <host> -u <user> -P <pass> [-a <digest|gss>] indication  dynamicsubscribe <destination_uri> <subscribetype> <expirationtimeout> <querylanguage> <queryfilter> [<resource_uri>]
+where  
+destination_uri   - IP address and path where the events should be sent. Its constructed as http://<ipaddress>:<port>/<path>
+			Ex : http://192.168.0.101:8080/eventsink
+subscribetype     - Is one of push|pushack|pushbatch|pull
+			push      - send event, acknowledgement not needed
+			pushack   - send event, acknowledgement needed
+			pushbatch - send event in a batch
+			pull      - do not send event, evets will be pulled
+expirationtimeout - Event subscription expiration timeout in seconds, 0 not to set exiration timeout
+querylanguage     - Query language to be used for the filter. <CQL|CQL>
+query             - Query Filter Ex. "select * from CIM_AlertIndication"
+resource_uri      - Resource URI Ex. http://schemas.dmtf.org/wbem/wscim/1/*
+                                 Ex. http://schemas.dmtf.org/wbem/wscim/1/cim_schema/2/CIM_SNMPTrapIndication
+Example :
+dashcli -h 192.168.0.20 -p 623 -u admin -P admin indication dynamicsubscribe http://192.168.0.101:8080/eventsink push 0 CQL "SELECT * FROM CIM_AlertIndication"
+Example :
+dashcli -h 192.168.0.20 -p 623 -u admin -P admin indication dynamicsubscribe http://192.168.0.101:8080/eventsink push 0 CQL "SELECT * FROM CIM_AlertIndication" http://schemas.dmtf.org/wbem/wscim/1/cim_schema/2/CIM_AlertIndication
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek indication collectionsubscribe http://192.168.1.101:8080/eventsink push 0 1
+
+Indication subscription created successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+
+Filter Name                  : DMTF:HW
+Destination                  : http://192.168.1.101:8080/eventsink
+On Fatal Error Policy        : Remove
+Other On Fatal Error Policy  : N/A
+Failure Trigger Time Interval: 0
+Subscription State           : Enabled
+Other Subscription State     : N/A
+Repeat Notification Policy   : None
+Repeat Notification Interval : N/A
+Repeat Notification Gap      : N/A
+Repeat Notification Count    : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] renew 2013-01-07T03:17:31-06:00
+
+Indication subscription renewed Successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+
+Filter Name                  : DMTF:HW
+Destination                  : http://192.168.1.101:8080/eventsink
+On Fatal Error Policy        : Remove
+Other On Fatal Error Policy  : N/A
+Failure Trigger Time Interval: 0
+Subscription State           : Enabled
+Other Subscription State     : N/A
+Repeat Notification Policy   : None
+Repeat Notification Interval : N/A
+Repeat Notification Gap      : N/A
+Repeat Notification Count    : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] unsubscribe
+
+UnSubscribed Successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+
+Error: No matching instance found in 'indicationsubscription[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[0] show
+
+Name                        : TextRedirectionSAP:1
+Element Name                : Text Redirection SAP for the Telnet Service:0
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : Telnet
+Port Number                 : 87
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[0] activate
+
+Session activated successfully
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[0] show
+
+Name                        : TextRedirectionSAP:1
+Element Name                : Text Redirection SAP for the Telnet Service:0
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : Telnet
+Port Number                 : 87
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[0] disable
+
+Session disabled successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[0] show
+
+Name                        : TextRedirectionSAP:1
+Element Name                : Text Redirection SAP for the Telnet Service:0
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : Telnet
+Port Number                 : 87
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[1] show
+
+Name                        : TextRedirectionSAP:2
+Element Name                : Text Redirection SAP for the Telnet Service:1
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : SSH
+Port Number                 : 57
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[1] activate
+
+Session activated successfully
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[1] show
+
+Name                        : TextRedirectionSAP:2
+Element Name                : Text Redirection SAP for the Telnet Service:1
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : SSH
+Port Number                 : 57
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[1] disable
+
+Session disabled successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[1] show
+
+Name                        : TextRedirectionSAP:2
+Element Name                : Text Redirection SAP for the Telnet Service:1
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : SSH
+Port Number                 : 57
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t usbredirection[0] show
+
+Redirection Name            : USBRedirectionSAP:0
+System Creation Class Name  : CIM_ComputerSystem
+System Name                 : 10.138.176.169
+Creation Class Name         : CIM_USBRedirectiontSAP
+Access URI                  : 
+Element Name                : USBRedirectionSAP:0
+EnabledState                : Enabled
+Requested State             : Enabled
+Connection Mode             : Connect
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t usbredirection[0] listlocaldrives
+
+Error: Invalid command 'listlocaldrives'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t usbredirection[0] startvmr image c:/images/fedora8.iso
+
+USB Redirection Configuration has been successfully completed
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t usbredirection[0] disconnect
+
+Error: Invalid command 'disconnect'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] show
+
+Element Name                  : Bootcfgsetting:0
+Instance ID                   : Bootcfgsetting:0
+Is Default Configuration      : No
+Is Current Configuration      : No
+Is Next Configuration         : Yes
+Is Next Single Configuration  : No
+Boot Device(s)                :
+	Device 0         : CIM:Force PXE Boot:1
+	Device 1         : CIM:Force HardDisk0 Boot:1
+	Device 2         : CIM:Force HardDisk1 Safe Boot:1
+	Device 3         : CIM:Force HardDisk2 Diag:1
+	Device 4         : CIM:Force CD/DVD Rom Boot:1
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] setdefault
+
+Set Default Boot Successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] show
+
+Error code - 300, retrying ...
+Error code - 300, retrying ...
+Error: Connection Failed : Failure in receiving network data
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] setnext
+
+Error code - 300, retrying ...
+Set Next Boot Successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] show
+
+Element Name                  : Bootcfgsetting:0
+Instance ID                   : Bootcfgsetting:0
+Is Default Configuration      : No
+Is Current Configuration      : No
+Is Next Configuration         : Yes
+Is Next Single Configuration  : No
+Boot Device(s)                :
+	Device 0         : CIM:Force PXE Boot:1
+	Device 1         : CIM:Force HardDisk0 Boot:1
+	Device 2         : CIM:Force HardDisk1 Safe Boot:1
+	Device 3         : CIM:Force HardDisk2 Diag:1
+	Device 4         : CIM:Force CD/DVD Rom Boot:1
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] delete
+
+Boot Config deleted Successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0] show
+
+Element Name                  : Bootcfgsetting:0
+Instance ID                   : Bootcfgsetting:0
+Is Default Configuration      : No
+Is Current Configuration      : No
+Is Next Configuration         : Yes
+Is Next Single Configuration  : No
+Boot Device(s)                :
+	Device 0         : CIM:Force PXE Boot:1
+	Device 1         : CIM:Force HardDisk0 Boot:1
+	Device 2         : CIM:Force HardDisk1 Safe Boot:1
+	Device 3         : CIM:Force HardDisk2 Diag:1
+	Device 4         : CIM:Force CD/DVD Rom Boot:1
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] show
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] read 1000 5
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] write 0 abcd
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] importfromuri 0 100 http://dash.com
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] exportfromuri 0 100 http://dash.com
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] reassignowner guest
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] assignaccess Guest Read
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] lock true
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0] delete
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t operatingsystem[0] show
+
+Name                        : Microsoft Windows 10 Pro
+OS Type                     : Microsoft Windows 10 64-bit
+Enabled State               : Disabled
+Requested State             : No Change
+Available Requested States  : N/A
+Transitioning To State      : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bios[0] show
+
+BIOS Name                       : AMI:0
+Manufacturer                    : INSYDE Corp.
+Version                         : VCD333526N.FD
+Is PrimaryBIOS                  : N/A
+List Of Languages               : N/A
+Current Language                : N/A
+Loaded Starting Address         : N/A
+Loaded Ending Address           : N/A
+Load Utility Information        : N/A
+Software Element State          : Executable
+Software Element ID             : 100
+Target OperatingSystem          : Other
+Other Target Operating System   : N/A
+Build Number                    : N/A
+Serial Number                   : N/A
+Code Set                        : N/A
+Identification Code             : N/A
+Language Edition                : N/A
+Registry URIs                   : N/A
+Release Date                    : N/A
+
+BIOS Attribute (s)   :
+        Instance ID                    : Attribute:0
+        Attribute Name                 : Com Port Address
+        Current Value(s)               : Disabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:1
+        Attribute Name                 : Route Port 80h Cycles to
+        Current Value(s)               : LPC
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : LPC,
+                                         PCI
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:2
+        Attribute Name                 : Legacy USB Support
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:3
+        Attribute Name                 : Force PXE Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:4
+        Attribute Name                 : Force HardDisk0 Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:5
+        Attribute Name                 : Force HardDisk1 Safe Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:6
+        Attribute Name                 : Force HardDisk2 Diag
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:7
+        Attribute Name                 : Force CD/DVD Rom Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bios[0] restoredefaults
+
+Errorr: Invalid command 'restoredefaults'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bios[0] show
+
+BIOS Name                       : AMI:0
+Manufacturer                    : INSYDE Corp.
+Version                         : VCD333526N.FD
+Is PrimaryBIOS                  : N/A
+List Of Languages               : N/A
+Current Language                : N/A
+Loaded Starting Address         : N/A
+Loaded Ending Address           : N/A
+Load Utility Information        : N/A
+Software Element State          : Executable
+Software Element ID             : 100
+Target OperatingSystem          : Other
+Other Target Operating System   : N/A
+Build Number                    : N/A
+Serial Number                   : N/A
+Code Set                        : N/A
+Identification Code             : N/A
+Language Edition                : N/A
+Registry URIs                   : N/A
+Release Date                    : N/A
+
+BIOS Attribute (s)   :
+        Instance ID                    : Attribute:0
+        Attribute Name                 : Com Port Address
+        Current Value(s)               : Disabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:1
+        Attribute Name                 : Route Port 80h Cycles to
+        Current Value(s)               : LPC
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : LPC,
+                                         PCI
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:2
+        Attribute Name                 : Legacy USB Support
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:3
+        Attribute Name                 : Force PXE Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:4
+        Attribute Name                 : Force HardDisk0 Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:5
+        Attribute Name                 : Force HardDisk1 Safe Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:6
+        Attribute Name                 : Force HardDisk2 Diag
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:7
+        Attribute Name                 : Force CD/DVD Rom Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bios[0] show
+
+BIOS Name                       : AMI:0
+Manufacturer                    : INSYDE Corp.
+Version                         : VCD333526N.FD
+Is PrimaryBIOS                  : N/A
+List Of Languages               : N/A
+Current Language                : N/A
+Loaded Starting Address         : N/A
+Loaded Ending Address           : N/A
+Load Utility Information        : N/A
+Software Element State          : Executable
+Software Element ID             : 100
+Target OperatingSystem          : Other
+Other Target Operating System   : N/A
+Build Number                    : N/A
+Serial Number                   : N/A
+Code Set                        : N/A
+Identification Code             : N/A
+Language Edition                : N/A
+Registry URIs                   : N/A
+Release Date                    : N/A
+
+BIOS Attribute (s)   :
+        Instance ID                    : Attribute:0
+        Attribute Name                 : Com Port Address
+        Current Value(s)               : Disabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:1
+        Attribute Name                 : Route Port 80h Cycles to
+        Current Value(s)               : LPC
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : LPC,
+                                         PCI
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:2
+        Attribute Name                 : Legacy USB Support
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:3
+        Attribute Name                 : Force PXE Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:4
+        Attribute Name                 : Force HardDisk0 Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:5
+        Attribute Name                 : Force HardDisk1 Safe Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:6
+        Attribute Name                 : Force HardDisk2 Diag
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:7
+        Attribute Name                 : Force CD/DVD Rom Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] show
+
+Element Name                : Battery:0
+Device ID                   : Battery
+Battery Status              : Unknown
+Operational State           : OK
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Enabled
+Chemistry                   : Lithium-ion
+Max Recharge Count          : N/A
+Recharge Count              : N/A
+Expected Life               : N/A
+Estimated Run Time          : N/A
+Remaining Capacity          : N/A
+Time To Full Recharge       : N/A
+Max Recharge Time           : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] enable
+
+Battery Enabled successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] show
+
+Element Name                : Battery:0
+Device ID                   : Battery
+Battery Status              : Unknown
+Operational State           : OK
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Enabled
+Chemistry                   : Lithium-ion
+Max Recharge Count          : N/A
+Recharge Count              : N/A
+Expected Life               : N/A
+Estimated Run Time          : N/A
+Remaining Capacity          : N/A
+Time To Full Recharge       : N/A
+Max Recharge Time           : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] disable
+
+Battery Disabled successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] show
+
+Element Name                : Battery:0
+Device ID                   : Battery
+Battery Status              : Unknown
+Operational State           : OK
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Enabled
+Chemistry                   : Lithium-ion
+Max Recharge Count          : N/A
+Recharge Count              : N/A
+Expected Life               : N/A
+Estimated Run Time          : N/A
+Remaining Capacity          : N/A
+Time To Full Recharge       : N/A
+Max Recharge Time           : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] test
+
+Battery Test successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0] recharge
+
+Battery recharge successfully
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t registeredprofile[0] show
+
+Registered Name             : Base Desktop And Mobile
+Registered Organization     : DMTF
+Registered Version          : 1.0.2
+Advertise Types             : Not Advertised
+Instance ID                 : Register:0
+Implemented Features        : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t dnsclient[0] show
+
+Name                              : DNS:0
+Element Name                      : DNS:0
+Name Format                       : N/A
+Hostname                          : N/A
+Protocol IF Type                  : N/A
+Requested State                   : N/A
+Enabled State                     : N/A
+Append Primary Suffixes           : N/A
+Append Parent Suffixes            : N/A
+DNS Suffixes To Append            : N/A
+Domain Name                       : N/A
+Use Suffix When Registering       : N/A
+Register This Connections Address : N/A
+DHCP Options To Use               : N/A
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t dhcpclient[0] show
+
+Name                        : dhcp:0
+Element Name                : dhcp:0
+Name Format                 : 2
+Protocol IF Type            : Other
+Requested State             : Enabled
+Enabled State               : Enabled but Offline
+Client State                : Unknown
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t ipinterface[0] show
+
+Name                        : IPProtocol:0
+Element Name                : ip1:0
+Name Format                 : 2
+Protocol IF Type            : IPv4
+IPv4 Address                : 10.138.176.169
+Subnet Mask                 : 255.255.248.0
+Address Origin              : Static
+IPv6 Address                : N/A
+IPv6 Address Type           : N/A
+IPv6 Subnet Prefix Length   : N/A
+Enabled State               : Enabled
+Requested State             : Not Applicable
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationfilter[0] show
+
+Error: No matching instance found in 'indicationfilter[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] show
+
+Error: No matching instance found in 'indicationsubscription[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0] delete
+
+Error: No matching instance found in 'indicationsubscription[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t alertdestination[0] show
+
+Error: No matching instance found in 'alertdestination[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t ethernetport[0] show
+
+Name                         : EthernetPort
+Element Name                 : EthernetPort:0
+Device ID                    : EthernetPort:0
+Speed                        : N/A
+Maximum Speed                : 1 Gbps
+Requested Speed              : N/A
+Link Technology              : Ethernet
+PortType                     : 1000BaseT
+MAC Address                  : 00001a1e53b4
+Network Addresses            : 00001a1e53b4
+Capabilities                 : WakeOnLan
+EnabledCapabilities          : N/A
+Enabled State                : Enabled
+Requested State              : Not Applicable
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t kvmredirection[0] show
+
+Name                        : KVMRedirectionSAP
+Creation Class Name         : CIM_KVMRedirectionSAP
+Element Name                : KVMRedirectionSAP:0
+Enabled State               : Disabled
+Max Current Enabled SAPs    : 2
+Redirection Service Type    : KVM
+Sharing Mode                : Exclusive
+KVM Protocol                : RDP
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t logentry[0] show
+
+Error: No matching instance found in 'logentry[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t recordlog[0] show
+
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:INFO
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:0
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t registeredprofile[0]
+
+Displays the supported profiles
+Allowed commands:
+	show
+	isadvertised
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t computersystem[0]
+
+Allowed commands:
+	show
+	power       [status|on|restart|shutdown|sleep|hibernate|turnoff|reset|cycle|availablestates|supportedstates|CODE]
+
+	enumerate   asset|bootconfig|fan|memory|powersupply|processor|sensor|software|user
+	user        add
+	bootconfig  add
+	opaquemanagementdata  create
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t processor[0]
+
+Allowed commands:
+	show
+	enumerate  sensor|fan|memory|asset
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t memory[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t asset[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0]
+
+Allowed commands:
+	show
+	changebootorder <newbootorderlist...>
+	delete
+	setdefault
+	setnext
+	setnextsingleuse
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bios[0]
+
+Allowed commands:
+	show
+	setattribute <attributename> <value_1> [<value_2>... <value_n>]
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t powersupply[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t fan[0]
+
+Error: No matching instance found in 'fan[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t software[0]
+
+Allowed commands:
+	show
+	install
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t operatingsystem[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t battery[0]
+
+Allowed commands:
+	show
+	enable
+	disable
+	test
+	recharge
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t user[0]
+
+Allowed commands:
+	show
+	enable
+	disable
+	delete
+	changepassword <password>
+	assignroles <rolename_1> [<rolename_2> ... <rolename_n>]
+	removeroles <rolename_1> [<rolename_2> ... <rolename_n>]
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t role[0]
+
+Allowed commands:
+	show
+	listpermission
+	setpermission <permission_1> [<permission_2>... <permission_n>]
+	addpermission <permission_1> [<permission_2>... <permission_n>]
+	removepermission <permission_1> [<permission_2>... <permission_n>]
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t networkport[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t dhcpclient[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t ipinterface[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t dnsclient[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t opaquemanagementdata[0]
+
+Error: No matching instance found in 'opaquemanagementdata[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t textredirection[0]
+
+Allowed commands:
+	show
+	activate
+	disable
+	start
+	starttcr
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t usbredirection[0]
+
+Allowed commands:
+	show
+	activate
+	disable
+	startvmr
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationfilter[0]
+
+Error: No matching instance found in 'indicationfilter[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t filtercollection[0]
+
+Allowed commands:
+	show
+	delete
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t alertdestination[0]
+
+Error: No matching instance found in 'alertdestination[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t indicationsubscription[0]
+
+Error: No matching instance found in 'indicationsubscription[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t ethernetport[0]
+
+Allowed commands:
+	show
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t kvmredirection[0]
+
+Allowed commands:
+	show
+	enable
+	disable
+	connect
+	startkvm
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t logentry[0]
+
+Error: No matching instance found in 'logentry[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t recordlog[0]
+
+Allowed commands:
+	show
+
+================================================================================
+

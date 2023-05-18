@@ -1,0 +1,224 @@
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t powersupply[0] show
+
+Element Name                : PowerSupply:0
+Device ID                   : PowerSupply:0
+Total Power                 : 0
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Operational State           : OK
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t software[0] show
+
+Instance ID                 : SW:0
+Element Name                : Bios Firmware
+Is Entity                   : True
+Version String              : VCD333526N.FD
+Manufacturer                : INSYDE Corp.
+Major Version               : 1
+Minor Version               : 0
+Revision Number             : 1
+Build Number                : 1
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : Bios Firmware
+IdentityInfo Value          : BIOS:285409536:0
+Operational Status          : N/A
+Software Classifications    : Firmware/BIOS
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t networkport[0] show
+
+Name                        : EthernetPort
+Element Name                : EthernetPort:0
+Device ID                   : EthernetPort:0
+Speed                       : N/A
+Maximum Speed               : 1 Gbps
+Requested Speed             : N/A
+Link Technology             : Ethernet
+MAC Address                 : 00001a1e53b4
+Enabled State               : Enabled
+Requested State             : Not Applicable
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t memory[0] show
+
+Element Name                : Total System Memory:0
+Device ID                   : Memory:0
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 16384 MB
+Available Memory            : 16384 MB
+Is Volatile Memory          : Yes
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t asset[0] show
+
+Element Name                : BaseBoard:0
+Manufacturer                : AMD
+Model                       : Celadon-RN
+Serial Number               : Base Board Serial Number
+Part Number                 : Base Board Version
+SKU                         : NULL
+Tag                         : Card:0
+Can be FRUed ?              : Yes
+Is HostingBoard ?           : Yes
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t sensor[0] show
+
+Error: No matching instance found in 'sensor[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t sensor[0] reading
+
+Error: No matching instance found in 'sensor[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t sensor[0] setthreshold lnc 100
+
+Error: No matching instance found in 'sensor[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t fan[0] show
+
+Error: No matching instance found in 'fan[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t fan[0] setspeed 100
+
+Error: No matching instance found in 'fan[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t fan[0] enumerate asset
+
+Error: No matching instance found in 'fan[0]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] show
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] assignroles Admin
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] show
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] removeroles Admin
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] show
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] changepassword testpasswd
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] delete
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t user[2] show
+
+Error: No matching instance found in 'user[2]'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t role[1] show
+
+Role Name                   : Role:1
+Privileges                  : priv:13 (TextConsoleRedirection(Execute)),
+                              priv:14 (USBRedirection(Execute)),
+                              priv:21 (KVMRedirection(Execute))
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t role[1] show
+
+Role Name                   : Role:1
+Privileges                  : priv:13 (TextConsoleRedirection(Execute)),
+                              priv:14 (USBRedirection(Execute)),
+                              priv:21 (KVMRedirection(Execute))
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t role[1] show
+
+Role Name                   : Role:1
+Privileges                  : priv:13 (TextConsoleRedirection(Execute)),
+                              priv:14 (USBRedirection(Execute)),
+                              priv:21 (KVMRedirection(Execute))
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t role[1] show
+
+Role Name                   : Role:1
+Privileges                  : priv:13 (TextConsoleRedirection(Execute)),
+                              priv:14 (USBRedirection(Execute)),
+                              priv:21 (KVMRedirection(Execute))
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t role[1] delete
+
+Error: Invalid command 'delete'
+
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t role[1] show
+
+Role Name                   : Role:1
+Privileges                  : priv:13 (TextConsoleRedirection(Execute)),
+                              priv:14 (USBRedirection(Execute)),
+                              priv:21 (KVMRedirection(Execute))
+================================================================================
+

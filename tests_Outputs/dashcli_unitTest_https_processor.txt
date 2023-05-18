@@ -1,0 +1,214 @@
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t processor[0] show
+
+Element Name                : Processor:0
+Device ID                   : Processor:0
+Family                      : AMD Zen(TM) Processor Family
+Stepping                    : AMD Ryzen 3 PRO 4450U with Radeon Graphics
+CPU Status                  : CPU Enabled
+Health State                : OK
+Cur Clock Speed             : 2500 MHz
+Max Clock Speed             : 3800 MHz
+Ext bus speed               : 100 MHz
+Load Percent                : 0
+Enabled State               : Enabled
+Requested State             : Enabled
+Operational State           : OK
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t processor[0] enumerate memory
+
+
+Memory Instance 0
+Element Name                : Total System Memory:0
+Device ID                   : Memory:0
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 16384 MB
+Available Memory            : 16384 MB
+Is Volatile Memory          : Yes
+
+Memory Instance 1
+Element Name                : L1 - Cache
+Device ID                   : CacheMemory:1
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 262144 Bytes
+Available Memory            : 262144 Bytes
+Is Volatile Memory          : Yes
+
+Memory Instance 2
+Element Name                : L2 - Cache
+Device ID                   : CacheMemory:2
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 2048 KB
+Available Memory            : 2048 KB
+Is Volatile Memory          : Yes
+
+Memory Instance 3
+Element Name                : L3 - Cache
+Device ID                   : CacheMemory:3
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 4096 KB
+Available Memory            : 4096 KB
+Is Volatile Memory          : Yes
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t processor[0] enumerate sensor
+
+
+Sensor(s) not found
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t processor[0] enumerate fan
+
+
+Fan(s) not found
+================================================================================
+
+# DASH CLI v4.5.0.1555
+# dashcli -v 1 -S https -C -a digest -h 10.138.176.169 -p 664 -u Administrator -P Realtek -t processor[0] enumerate asset
+
+
+Asset Instance 0
+Element Name                : BaseBoard:0
+Manufacturer                : AMD
+Model                       : Celadon-RN
+Serial Number               : Base Board Serial Number
+Part Number                 : Base Board Version
+SKU                         : NULL
+Tag                         : Card:0
+Can be FRUed ?              : Yes
+Is HostingBoard ?           : Yes
+
+Asset Instance 1
+Element Name                : Chassis:0
+Manufacturer                : Chassis Manufacturer
+Model                       : Celadon-RN
+Serial Number               : Chassis Serial Number
+Part Number                 : Chassis Version
+SKU                         : 123456789
+Tag                         : Chassis:0
+Chassis Type                : Desktop
+Version                     : Chassis Version
+Package Type                : Chassis/Frame
+Can be FRUed ?              : No
+
+
+Asset Instance 2
+Element Name                : Processor:0
+Manufacturer                : Advanced Micro Devices, Inc.
+Model                       : AMD Ryzen 3 PRO 4450U with Radeon Graphics
+Serial Number               : Unknown
+Part Number                 : Unknown
+SKU                         : NULL
+Tag                         : Processor:0
+Can be FRUed ?              : No
+
+
+Asset Instance 3
+Element Name                : Memory:0
+Manufacturer                : N/A
+Model                       : N/A
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : N/A
+
+
+Asset Instance 4
+Element Name                : N/A
+Manufacturer                : N/A
+Model                       : N/A
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : N/A
+
+
+Asset Instance 5
+Element Name                : Slot:0
+Manufacturer                : N/A
+Model                       : J10
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:0
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 6
+Element Name                : Slot:1
+Manufacturer                : N/A
+Model                       : J79
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:1
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 7
+Element Name                : Slot:2
+Manufacturer                : N/A
+Model                       : J92
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:2
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 8
+Element Name                : Slot:3
+Manufacturer                : N/A
+Model                       : J90
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:3
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 9
+Element Name                : Slot:4
+Manufacturer                : N/A
+Model                       : J19
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:4
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 10
+Element Name                : Slot:5
+Manufacturer                : N/A
+Model                       : CON1
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:5
+Connector Layout            : Slot
+Connector Type              : Other
+
+================================================================================
+
