@@ -13,16 +13,19 @@ PORT="623"
 USER="Administrator"
 PASSWORD="Realtek"
 HTTP_PROTOCOL="http"
-DASHCMDTYPE=$1
+DASHCMDTYPE="CASE"
 COUNT=1
 #dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t kvmredirection[1] startkvm
 _run_cli() {
 	_CMD="dashcli -v 1 -S $HTTP_PROTOCOL -C -a digest -h $TARGET -p $PORT -u $USER -P $PASSWORD $*"
-	echo "<${DASHCMDTYPE}_${COUNT}> "
+	echo "<${DASHCMDTYPE}> "
 	echo "# ${DASH_CLI_VERSION}"
-	echo "${_CMD}" && ${_CMD}
-	echo "</${DASHCMDTYPE}_${COUNT}> "
-	COUNT=$(( COUNT+1 ))
+	echo "${_CMD}" 
+	
+	
+	${_CMD}
+	echo "</${DASHCMDTYPE}> "
+	# COUNT=$(( COUNT+1 ))
 	
 	# echo "================================================================================"
 	# echo ""
