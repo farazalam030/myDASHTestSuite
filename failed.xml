@@ -1,0 +1,71 @@
+<case> 
+<dash_version>
+DASH CLI v4.5.0.1564
+</dash_version>
+<cmd>
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t user[0]
+</cmd>
+<result>
+
+Allowed commands:
+	show
+	enable
+	disable
+	delete
+	changepassword <password>
+	assignroles <rolename_1> [<rolename_2> ... <rolename_n>]
+	removeroles <rolename_1> [<rolename_2> ... <rolename_n>]
+
+</result>
+</case> 
+<case> 
+<dash_version>
+DASH CLI v4.5.0.1564
+</dash_version>
+<cmd>
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t role[0]
+</cmd>
+<result>
+
+Allowed commands:
+	show
+	listpermission
+	setpermission <permission_1> [<permission_2>... <permission_n>]
+	addpermission <permission_1> [<permission_2>... <permission_n>]
+	removepermission <permission_1> [<permission_2>... <permission_n>]
+
+</result>
+</case> 
+<case> 
+<dash_version>
+DASH CLI v4.5.0.1564
+</dash_version>
+<cmd>
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bios[0]
+</cmd>
+<result>
+
+Allowed commands:
+	show
+	setattribute <attributename> <value_1> [<value_2>... <value_n>]
+
+</result>
+</case> <case> 
+<dash_version>
+DASH CLI v4.5.0.1564
+</dash_version>
+<cmd>
+dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t bootconfig[0]
+</cmd>
+<result>
+
+Allowed commands:
+	show
+	changebootorder <newbootorderlist...>
+	delete
+	setdefault
+	setnext
+	setnextsingleuse
+
+</result>
+</case> 

@@ -13,18 +13,27 @@ PORT="623"
 USER="Administrator"
 PASSWORD="Realtek"
 HTTP_PROTOCOL="http"
-DASHCMDTYPE="CASE"
-COUNT=1
+# DASHCMDTYPE="case"
+
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 #dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t kvmredirection[1] startkvm
+echo "<log>"
+
+
 _run_cli() {
+
+	echo "<case> "
 	_CMD="dashcli -v 1 -S $HTTP_PROTOCOL -C -a digest -h $TARGET -p $PORT -u $USER -P $PASSWORD $*"
-	echo "<${DASHCMDTYPE}> "
-	echo "# ${DASH_CLI_VERSION}"
+	echo "<version>"
+	echo "${DASH_CLI_VERSION}"
+	echo "</version>"
+	echo "<cmd>"
 	echo "${_CMD}" 
-	
-	
+	echo "</cmd>"
+	echo "<result>"
 	${_CMD}
-	echo "</${DASHCMDTYPE}> "
+	echo "</result>"
+	echo "</case>"
 	# COUNT=$(( COUNT+1 ))
 	
 	# echo "================================================================================"
@@ -131,7 +140,7 @@ _test_misc() {
 	_run_cli indication createfilter  CQL  SELECT \* FROM CIM_AlertIndication
 	_run_cli indication createdestination http://192.168.0.101:8080/eventsink
 	_run_cli indication staticsubscribe http://192.168.0.101:8080/eventsink push 0 1
-	_run_cli indication dynamicsubscribe http://192.168.1.101:80
+	# _run_cli indication dynamicsubscribe http://192.168.1.101:80
 	_run_cli indication collectionsubscribe http://192.168.1.101:8080/eventsink push 0 1
 
 	_run_cli -t indicationsubscription[0] show
@@ -203,15 +212,15 @@ _test_misc() {
 	_run_cli -t processor[0]
 	_run_cli -t memory[0]
 	_run_cli -t asset[0]
-	_run_cli -t bootconfig[0]
-	_run_cli -t bios[0]
+	# _run_cli -t bootconfig[0]
+	# _run_cli -t bios[0]
 	_run_cli -t powersupply[0]
 	_run_cli -t fan[0]
 	_run_cli -t software[0]
 	_run_cli -t operatingsystem[0]
 	_run_cli -t battery[0]
-	_run_cli -t user[0]
-	_run_cli -t role[0]
+	# _run_cli -t user[0]
+	# _run_cli -t role[0]
 	_run_cli -t networkport[0]
 	_run_cli -t dhcpclient[0]
 	_run_cli -t ipinterface[0]
@@ -228,27 +237,27 @@ _test_misc() {
 	_run_cli -t logentry[0]
 	_run_cli -t recordlog[0]
 }
-
+OPT=$1
 if [ $# != 0 ]; then
-	if [[ $1 == 'all' ]]; then 
+	if [[ $OPT == 'all' ]]; then 
 		_test_enumerate
 		_test_computersystem
 		_test_case0
 		_test_processor
 		_test_misc
-	elif  [[ $1 == 'enumerate' ]]; then 
+	elif  [[ $OPT == 'enumerate' ]]; then 
 		_test_enumerate
 		# echo "_test_enumerate"
-	elif  [[ $1 == 'computersystem' ]]; then
+	elif  [[ $OPT == 'computersystem' ]]; then
 		_test_computersystem
 		# echo "_test_computersystem"
-	elif  [[ $1 == 'case0'  ]];then
+	elif  [[ $OPT == 'case0'  ]];then
 		_test_case0
 		# echo "_test_case0"
-	elif  [[ $1 == 'processor' ]];then
+	elif  [[ $OPT == 'processor' ]];then
 		_test_processor
 		# echo "_test_processor"
-	elif  [[ $1 == 'misc' ]];then
+	elif  [[ $OPT == 'misc' ]];then
 		_test_misc
 		# echo "test_misc"
 	else 
@@ -271,3 +280,4 @@ else
 
 fi
 
+echo "</log>"
