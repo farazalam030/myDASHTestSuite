@@ -1,0 +1,1168 @@
+{"log":{
+"cases":[
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate alertdestination" 
+"result": "
+
+
+AlertDestination not found
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate asset" 
+"result": "
+
+
+Asset Instance 0
+Element Name                : BaseBoard:0
+Manufacturer                : AMD
+Model                       : Celadon-RN
+Serial Number               : Base Board Serial Number
+Part Number                 : Base Board Version
+SKU                         : NULL
+Tag                         : Card:0
+Can be FRUed ?              : Yes
+Is HostingBoard ?           : Yes
+
+Asset Instance 1
+Element Name                : Chassis:0
+Manufacturer                : Chassis Manufacturer
+Model                       : Celadon-RN
+Serial Number               : Chassis Serial Number
+Part Number                 : Chassis Version
+SKU                         : 123456789
+Tag                         : Chassis:0
+Chassis Type                : Desktop
+Version                     : Chassis Version
+Package Type                : Chassis/Frame
+Can be FRUed ?              : No
+
+
+Asset Instance 2
+Element Name                : Processor:0
+Manufacturer                : Advanced Micro Devices, Inc.
+Model                       : AMD Ryzen 3 PRO 4450U with Radeon Graphics
+Serial Number               : Unknown
+Part Number                 : Unknown
+SKU                         : NULL
+Tag                         : Processor:0
+Can be FRUed ?              : No
+
+
+Asset Instance 3
+Element Name                : Memory:0
+Manufacturer                : Micron Technology
+Model                       : N/A
+Serial Number               : F2592CF4
+Part Number                 : 8ATF1G64HZ-2G6E1    
+SKU                         : N/A
+Tag                         : Mem:0
+Memory Type                 : DDR4
+Memory Speed                : 2667 nanosecond
+Memory Capacity             : 8192 MB
+Memory Bank Label           : P0 CHANNEL A
+Memory FormFactor           : DIMM
+Can be FRUed ?              : No
+
+
+Asset Instance 4
+Element Name                : Memory:1
+Manufacturer                : Micron Technology
+Model                       : N/A
+Serial Number               : F2592CF9
+Part Number                 : 8ATF1G64HZ-2G6E1    
+SKU                         : N/A
+Tag                         : Mem:1
+Memory Type                 : DDR4
+Memory Speed                : 2667 nanosecond
+Memory Capacity             : 8192 MB
+Memory Bank Label           : P0 CHANNEL B
+Memory FormFactor           : DIMM
+Can be FRUed ?              : No
+
+
+Asset Instance 5
+Element Name                : Slot:0
+Manufacturer                : N/A
+Model                       : J10
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:0
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 6
+Element Name                : Slot:1
+Manufacturer                : N/A
+Model                       : J79
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:1
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 7
+Element Name                : Slot:2
+Manufacturer                : N/A
+Model                       : J92
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:2
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 8
+Element Name                : Slot:3
+Manufacturer                : N/A
+Model                       : J90
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:3
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 9
+Element Name                : Slot:4
+Manufacturer                : N/A
+Model                       : J19
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:4
+Connector Layout            : Slot
+Connector Type              : Other
+
+
+Asset Instance 10
+Element Name                : Slot:5
+Manufacturer                : N/A
+Model                       : CON1
+Serial Number               : N/A
+Part Number                 : N/A
+SKU                         : N/A
+Tag                         : Slot:5
+Connector Layout            : Slot
+Connector Type              : Other
+
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate battery" 
+"result": "
+
+
+Battery Instance 0
+Element Name                : Battery:0
+Device ID                   : Battery
+Battery Status              : Unknown
+Operational State           : OK
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Enabled
+Chemistry                   : Lithium-ion
+Max Recharge Count          : N/A
+Recharge Count              : N/A
+Expected Life               : N/A
+Estimated Run Time          : N/A
+Remaining Capacity          : N/A
+Time To Full Recharge       : N/A
+Max Recharge Time           : N/A
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate bios" 
+"result": "
+
+
+BIOS Element Instance 0
+BIOS Name                       : AMI:0
+Manufacturer                    : INSYDE Corp.
+Version                         : VCD333526N.FD
+Is PrimaryBIOS                  : N/A
+List Of Languages               : N/A
+Current Language                : N/A
+Loaded Starting Address         : N/A
+Loaded Ending Address           : N/A
+Load Utility Information        : N/A
+Software Element State          : Executable
+Software Element ID             : 100
+Target OperatingSystem          : Other
+Other Target Operating System   : N/A
+Build Number                    : N/A
+Serial Number                   : N/A
+Code Set                        : N/A
+Identification Code             : N/A
+Language Edition                : N/A
+Registry URIs                   : N/A
+Release Date                    : N/A
+
+BIOS Attribute (s)   :
+        Instance ID                    : Attribute:0
+        Attribute Name                 : Com Port Address
+        Current Value(s)               : Disabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:1
+        Attribute Name                 : Route Port 80h Cycles to
+        Current Value(s)               : LPC
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : LPC,
+                                         PCI
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:2
+        Attribute Name                 : Legacy USB Support
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:3
+        Attribute Name                 : Force PXE Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:4
+        Attribute Name                 : Force HardDisk0 Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:5
+        Attribute Name                 : Force HardDisk1 Safe Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:6
+        Attribute Name                 : Force HardDisk2 Diag
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+
+        Instance ID                    : Attribute:7
+        Attribute Name                 : Force CD/DVD Rom Boot
+        Current Value(s)               : Enabled
+        Default Value(s)               : N/A
+        Pending Value(s)               : N/A
+        Possible Value(s)              : Disabled,
+                                         Enabled
+        IsReadOnly                     : True
+        IsOrderedList                  : N/A
+
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate bootconfig" 
+"result": "
+
+
+Boot Config Instance 0
+Element Name                  : Bootcfgsetting:0
+Instance ID                   : Bootcfgsetting:0
+Is Default Configuration      : No
+Is Current Configuration      : No
+Is Next Configuration         : Yes
+Is Next Single Configuration  : No
+Boot Device(s)                :
+	Device 0         : CIM:Force PXE Boot:1
+	Device 1         : CIM:Force HardDisk0 Boot:1
+	Device 2         : CIM:Force HardDisk1 Safe Boot:1
+	Device 3         : CIM:Force HardDisk2 Diag:1
+	Device 4         : CIM:Force CD/DVD Rom Boot:1
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate computersystem" 
+"result": "
+
+
+Computer System Instance 0
+Name                                : 10.138.176.169
+Element Name                        : CS:0
+Primary Owner                       : SYSTEM
+Primary Owner Contact               : ManagedSystem
+Enabled State                       : Enabled
+Requested State                     : No Change
+Current Power State                 : On
+Requested Power State               : On
+Power On Time                       : N/A
+Dedicated To                        : Desktop
+Supported Power Change Capabilities : Power State Settable,
+                                      Power Cycling Supported,
+                                      Off Hard Power Cycling Supported,
+                                      HW Reset Supported,
+                                      Graceful Shutdown Supported
+Supported Power States              : On,
+                                      Sleep -Deep,
+                                      Power Cycle (Off - Soft),
+                                      Hibernate (Off - Soft),
+                                      Off - Soft,
+                                      Power Cycle (Off-Hard),
+                                      Master Bus Reset,
+                                      Diagnostic Interrupt (NMI),
+                                      Off - Soft Graceful,
+                                      Off - Hard Graceful,
+                                      Master Bus Reset Graceful,
+                                      Power Cycle (Off - Soft Graceful),
+                                      Power Cycle (Off - Hard Graceful)
+Request Supported Power States      : N/A
+Available Requested Power States    : On,
+                                      Sleep -Deep,
+                                      Hibernate (Off - Soft),
+                                      Off - Soft,
+                                      Master Bus Reset
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate dhcpclient" 
+"result": "
+
+
+DHCPClient Instance 0
+Name                        : dhcp:0
+Element Name                : dhcp:0
+Name Format                 : 2
+Protocol IF Type            : Other
+Requested State             : Enabled
+Enabled State               : Enabled but Offline
+Client State                : Unknown
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate dnsclient" 
+"result": "
+
+
+DNSClient Instance 0
+Name                              : DNS:0
+Element Name                      : DNS:0
+Name Format                       : N/A
+Hostname                          : N/A
+Protocol IF Type                  : N/A
+Requested State                   : N/A
+Enabled State                     : N/A
+Append Primary Suffixes           : N/A
+Append Parent Suffixes            : N/A
+DNS Suffixes To Append            : N/A
+Domain Name                       : N/A
+Use Suffix When Registering       : N/A
+Register This Connections Address : N/A
+DHCP Options To Use               : N/A
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate ethernetport" 
+"result": "
+
+
+EthernetPort Instance 0
+Name                         : EthernetPort
+Element Name                 : EthernetPort:0
+Device ID                    : EthernetPort:0
+Speed                        : N/A
+Maximum Speed                : 1 Gbps
+Requested Speed              : N/A
+Link Technology              : Ethernet
+PortType                     : 1000BaseT
+MAC Address                  : 00001a1e53b4
+Network Addresses            : 00001a1e53b4
+Capabilities                 : WakeOnLan
+EnabledCapabilities          : N/A
+Enabled State                : Enabled
+Requested State              : Not Applicable
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate fan" 
+"result": "
+
+
+Fan(s) not found
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate indicationfilter" 
+"result": "
+
+
+IndicationFilter not found
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate indicationsubscription" 
+"result": "
+
+
+IndicationSubscription not found
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate ipinterface" 
+"result": "
+
+
+IPInterface Instance 0
+Name                        : IPProtocol:0
+Element Name                : ip1:0
+Name Format                 : 2
+Protocol IF Type            : IPv4
+IPv4 Address                : 10.138.176.169
+Subnet Mask                 : 255.255.248.0
+Address Origin              : Static
+IPv6 Address                : N/A
+IPv6 Address Type           : N/A
+IPv6 Subnet Prefix Length   : N/A
+Enabled State               : Enabled
+Requested State             : Not Applicable
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate kvmredirection" 
+"result": "
+
+
+KVM Redirection Instance 0
+Name                        : KVMRedirectionSAP
+Creation Class Name         : CIM_KVMRedirectionSAP
+Element Name                : KVMRedirectionSAP:0
+Enabled State               : Disabled
+Max Current Enabled SAPs    : 2
+Redirection Service Type    : KVM
+Sharing Mode                : Exclusive
+KVM Protocol                : RDP
+
+
+KVM Redirection Instance 1
+Name                        : KVMRedirectionSAP
+Creation Class Name         : CIM_KVMRedirectionSAP
+Element Name                : KVMRedirectionSAP:1
+Enabled State               : Disabled
+Max Current Enabled SAPs    : 2
+Redirection Service Type    : KVM
+Sharing Mode                : Exclusive
+KVM Protocol                : VNC-RFB
+
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate memory" 
+"result": "
+
+
+Memory Instance 0
+Element Name                : Total System Memory:0
+Device ID                   : Memory:0
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 16384 MB
+Available Memory            : 16384 MB
+Is Volatile Memory          : Yes
+
+Memory Instance 1
+Element Name                : L1 - Cache
+Device ID                   : CacheMemory:1
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 262144 Bytes
+Available Memory            : 262144 Bytes
+Is Volatile Memory          : Yes
+
+Memory Instance 2
+Element Name                : L2 - Cache
+Device ID                   : CacheMemory:2
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 2048 KB
+Available Memory            : 2048 KB
+Is Volatile Memory          : Yes
+
+Memory Instance 3
+Element Name                : L3 - Cache
+Device ID                   : CacheMemory:3
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Access Type                 : Read/Write Supported
+Total Memory                : 4096 KB
+Available Memory            : 4096 KB
+Is Volatile Memory          : Yes
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate networkport" 
+"result": "
+
+
+NetworkPort Instance 0
+Name                        : EthernetPort
+Element Name                : EthernetPort:0
+Device ID                   : EthernetPort:0
+Speed                       : N/A
+Maximum Speed               : 1 Gbps
+Requested Speed             : N/A
+Link Technology             : Ethernet
+MAC Address                 : 00001a1e53b4
+Enabled State               : Enabled
+Requested State             : Not Applicable
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate opaquemanagementdata" 
+"result": "
+
+
+Opaque Management Data not found
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate operatingsystem" 
+"result": "
+
+
+Operating System Instance 0
+Name                        : Microsoft Windows 10 Pro
+OS Type                     : Microsoft Windows 10 64-bit
+Enabled State               : Enabled
+Requested State             : No Change
+Available Requested States  : N/A
+Transitioning To State      : N/A
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate powersupply" 
+"result": "
+
+
+Power supply Instance 0
+Element Name                : PowerSupply:0
+Device ID                   : PowerSupply:0
+Total Power                 : 0
+Health State                : OK
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Operational State           : OK
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate processor" 
+"result": "
+
+
+Processor Instance 0
+Element Name                : Processor:0
+Device ID                   : Processor:0
+Family                      : AMD Zen(TM) Processor Family
+Stepping                    : AMD Ryzen 3 PRO 4450U with Radeon Graphics
+CPU Status                  : CPU Enabled
+Health State                : OK
+Cur Clock Speed             : 2500 MHz
+Max Clock Speed             : 3800 MHz
+Ext bus speed               : 100 MHz
+Load Percent                : 0
+Enabled State               : Enabled
+Requested State             : Enabled
+Operational State           : OK
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate recordlog" 
+"result": "
+
+
+RecordLog Instance 0
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:INFO
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:0
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+
+RecordLog Instance 1
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:HW
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:1
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+
+RecordLog Instance 2
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:USER
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:2
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+
+RecordLog Instance 3
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:WARNING
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:3
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+
+RecordLog Instance 4
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:ERROR
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:4
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+
+RecordLog Instance 5
+
+ Current Number Of Records        : 3
+ Element Name                     : DMTF:ALL
+ Enabled State                    : Enabled
+ Health State                     : N/A
+ Instance ID                      : id:5
+ Log State                        : Normal
+ Max Number Of Records            : 256
+ Name                             : record
+ Operational Status               : N/A
+ Overwrite Policy                 : Wraps When Full
+ Requested State                  : Not Applicable
+
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate registeredprofile" 
+"result": "
+
+
+RegisteredProfile Instance 0
+Registered Name             : Base Desktop And Mobile
+Registered Organization     : DMTF
+Registered Version          : 1.0.2
+Advertise Types             : Not Advertised
+Instance ID                 : Register:0
+Implemented Features        : N/A
+
+RegisteredProfile Instance 1
+Registered Name             : CPU
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:1
+Implemented Features        : N/A
+
+RegisteredProfile Instance 2
+Registered Name             : Boot Control
+Registered Organization     : DMTF
+Registered Version          : 1.0.2
+Advertise Types             : Not Advertised
+Instance ID                 : Register:2
+Implemented Features        : N/A
+
+RegisteredProfile Instance 3
+Registered Name             : Power State Management
+Registered Organization     : DMTF
+Registered Version          : 1.0.2
+Advertise Types             : Not Advertised
+Instance ID                 : Register:3
+Implemented Features        : N/A
+
+RegisteredProfile Instance 4
+Registered Name             : Indications
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:4
+Implemented Features        : N/A
+
+RegisteredProfile Instance 5
+Registered Name             : System Memory
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:5
+Implemented Features        : N/A
+
+RegisteredProfile Instance 6
+Registered Name             : Software Inventory
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:6
+Implemented Features        : N/A
+
+RegisteredProfile Instance 7
+Registered Name             : Fan
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:8
+Implemented Features        : N/A
+
+RegisteredProfile Instance 8
+Registered Name             : Power Supply
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:9
+Implemented Features        : N/A
+
+RegisteredProfile Instance 9
+Registered Name             : Physical Asset
+Registered Organization     : DMTF
+Registered Version          : 1.0.2
+Advertise Types             : Not Advertised
+Instance ID                 : Register:10
+Implemented Features        : N/A
+
+RegisteredProfile Instance 10
+Registered Name             : Simple Identity Management
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:11
+Implemented Features        : N/A
+
+RegisteredProfile Instance 11
+Registered Name             : Role Based Authorization
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:12
+Implemented Features        : N/A
+
+RegisteredProfile Instance 12
+Registered Name             : Text Console Redirection
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:13
+Implemented Features        : N/A
+
+RegisteredProfile Instance 13
+Registered Name             : USB Redirection
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:14
+Implemented Features        : N/A
+
+RegisteredProfile Instance 14
+Registered Name             : DHCP Client
+Registered Organization     : DMTF
+Registered Version          : 1.0.3
+Advertise Types             : Not Advertised
+Instance ID                 : Register:15
+Implemented Features        : N/A
+
+RegisteredProfile Instance 15
+Registered Name             : IP Interface
+Registered Organization     : DMTF
+Registered Version          : 1.0.2
+Advertise Types             : Not Advertised
+Instance ID                 : Register:16
+Implemented Features        : N/A
+
+RegisteredProfile Instance 16
+Registered Name             : BIOS Management
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:17
+Implemented Features        : N/A
+
+RegisteredProfile Instance 17
+Registered Name             : OS Status
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:18
+Implemented Features        : N/A
+
+RegisteredProfile Instance 18
+Registered Name             : Record Log
+Registered Organization     : DMTF
+Registered Version          : 2.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:19
+Implemented Features        : N/A
+
+RegisteredProfile Instance 19
+Registered Name             : KVM Redirection
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:21
+Implemented Features        : N/A
+
+RegisteredProfile Instance 20
+Registered Name             : Profile Registration
+Registered Organization     : DMTF
+Registered Version          : 1.0.1
+Advertise Types             : Not Advertised
+Instance ID                 : Register:22
+Implemented Features        : N/A
+
+RegisteredProfile Instance 21
+Registered Name             : Ethernet Port
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:23
+Implemented Features        : N/A
+
+RegisteredProfile Instance 22
+Registered Name             : Host LAN Network Port
+Registered Organization     : DMTF
+Registered Version          : 1.0.0
+Advertise Types             : Not Advertised
+Instance ID                 : Register:24
+Implemented Features        : N/A
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate role" 
+"result": "
+
+
+Role Instance 0
+Role Name                   : Role:0
+Privileges                  : priv:0 (BaseDesktopAndMobile(Execute)),
+                              priv:11 (SimpleIdentityManagement(Execute)),
+                              priv:12 (RoleBasedAuthorization(Execute))
+
+Role Instance 1
+Role Name                   : Role:1
+Privileges                  : priv:13 (TextConsoleRedirection(Execute)),
+                              priv:14 (USBRedirection(Execute)),
+                              priv:21 (KVMRedirection(Execute))
+
+Role Instance 2
+Role Name                   : Role:2
+Privileges                  : priv:0 (BaseDesktopAndMobile(Execute)),
+                              priv:1 (CPU(Execute)),
+                              priv:2 (BootControl(Execute)),
+                              priv:3 (PowerStateManagement(Execute)),
+                              priv:4 (Indications(Execute)),
+                              priv:5 (SystemMemory(Execute)),
+                              priv:6 (SoftwareInventory(Execute)),
+                              priv:7 (Sensors(Execute)),
+                              priv:8 (Fan(Execute)),
+                              priv:9 (PowerSupply(Execute)),
+                              priv:10 (PhysicalAsset(Execute)),
+                              priv:15 (DHCPClient(Execute)),
+                              priv:16 (IPInterface(Execute)),
+                              priv:17 (BIOSManagement(Execute)),
+                              priv:18 (OperatingSystem(Execute)),
+                              priv:19 (RecordLog(Execute)),
+                              priv:23 (EthernetPort(Execute)),
+                              priv:24 (NetworkPort(Execute)),
+                              priv:25 (Battery(Execute))
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate sensor" 
+"result": "
+
+
+Sensor(s) not found
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate software" 
+"result": "
+
+
+Software Instance 0
+Instance ID                 : SW:0
+Element Name                : Bios Firmware
+Is Entity                   : True
+Version String              : VCD333526N.FD
+Manufacturer                : INSYDE Corp.
+Major Version               : 1
+Minor Version               : 0
+Revision Number             : 1
+Build Number                : 1
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : Bios Firmware
+IdentityInfo Value          : BIOS:285409536:0
+Operational Status          : N/A
+Software Classifications    : Firmware/BIOS
+
+Software Instance 1
+Instance ID                 : SW:1
+Element Name                : Dash Firmware
+Is Entity                   : True
+Version String              : 20200428.1200000113
+Manufacturer                : Realtek
+Major Version               : 3
+Minor Version               : 0
+Revision Number             : 0
+Build Number                : N/A
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : Dash Firmware
+IdentityInfo Value          : DASH:Firmware:1
+Operational Status          : N/A
+Software Classifications    : Firmware
+
+Software Instance 2
+Instance ID                 : SW:2
+Element Name                : rt640x64.sys
+Is Entity                   : True
+Version String              : 10.42.526.2020
+Manufacturer                : Realtek
+Major Version               : 10
+Minor Version               : 42
+Revision Number             : 526
+Build Number                : 2020
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : C:\WINDOWS\system32\drivers\rt640x64.sys
+IdentityInfo Value          : RTK:Driver:2
+Operational Status          : N/A
+Software Classifications    : Driver
+
+Software Instance 3
+Instance ID                 : SW:3
+Element Name                : RtDashPt.sys
+Is Entity                   : True
+Version String              : 4.20.0.0
+Manufacturer                : Realtek
+Major Version               : 4
+Minor Version               : 20
+Revision Number             : 0
+Build Number                : 0
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : C:\WINDOWS\system32\drivers\RtDashPt.sys
+IdentityInfo Value          : RTK:Driver:3
+Operational Status          : N/A
+Software Classifications    : Driver
+
+Software Instance 4
+Instance ID                 : SW:4
+Element Name                : rteth.sys
+Is Entity                   : True
+Version String              : 1.0.0.0
+Manufacturer                : Realtek
+Major Version               : 1
+Minor Version               : 0
+Revision Number             : 0
+Build Number                : 0
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : C:\WINDOWS\system32\drivers\rteth.sys
+IdentityInfo Value          : RTK:Driver:4
+Operational Status          : N/A
+Software Classifications    : Driver
+
+Software Instance 5
+Instance ID                 : SW:5
+Element Name                : rtvdevw10x64.sys
+Is Entity                   : True
+Version String              : 10.2.414.2020
+Manufacturer                : Realtek
+Major Version               : 10
+Minor Version               : 2
+Revision Number             : 414
+Build Number                : 2020
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : C:\WINDOWS\system32\drivers\rtvdevw10x64.sys
+IdentityInfo Value          : RTK:Driver:5
+Operational Status          : N/A
+Software Classifications    : Driver
+
+Software Instance 6
+Instance ID                 : SW:6
+Element Name                : Realtek DASH Client Service
+Is Entity                   : True
+Version String              : 4.0.22
+Manufacturer                : Realtek
+Major Version               : 4
+Minor Version               : 0
+Revision Number             : 22
+Build Number                : 0
+Targeted Operating Systems  : N/A
+IdentityInfo Type           : Realtek DASH Client Service
+IdentityInfo Value          : RTK:Driver:6
+Operational Status          : N/A
+Software Classifications    : Application Software
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate textredirection" 
+"result": "
+
+
+Text Redirection Instance 0
+Name                        : TextRedirectionSAP:1
+Element Name                : Text Redirection SAP for the Telnet Service:0
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : Telnet
+Port Number                 : 87
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+
+Text Redirection Instance 1
+Name                        : TextRedirectionSAP:2
+Element Name                : Text Redirection SAP for the Telnet Service:1
+Enabled State               : Enabled but Offline
+Requested State             : Offline
+Protocol Type               : SSH
+Port Number                 : 57
+Termination Sequence        : 
+Text Flow Type              : Terminal Mode
+Other Type Description      : N/A
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate usbredirection" 
+"result": "
+
+
+USB Redirection Instance 0
+Redirection Name            : USBRedirectionSAP:0
+System Creation Class Name  : CIM_ComputerSystem
+System Name                 : 10.138.176.169
+Creation Class Name         : CIM_USBRedirectiontSAP
+Access URI                  : 
+Element Name                : USBRedirectionSAP:0
+EnabledState                : Enabled
+Requested State             : Enabled
+Connection Mode             : Connect
+"
+},
+{
+"version":"DASH CLI v4.5.0.1564"
+"cmd" : "dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek enumerate user" 
+"result": "
+
+
+User Instance 0
+Name                        : Administrator
+User id                     : Administrator
+Element Name                : Account
+Organization Name(s)        : DMTF
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Associated Role(s)          : Role:0,  Role:1,  Role:2
+
+User Instance 1
+Name                        : user1
+User id                     : user1
+Element Name                : Account
+Organization Name(s)        : DMTF
+Enabled State               : Enabled
+Requested State             : Not Applicable
+Associated Role(s)          : N/A
+
+"
+},
+{}
+]}
+}
