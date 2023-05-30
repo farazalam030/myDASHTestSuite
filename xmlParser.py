@@ -1,5 +1,7 @@
+import sys
 import xml.etree.ElementTree as ET
-xmlfile='/home/amd/work/myDASHTestSuite/sample.xml'
+xmlfile=sys.argv[1]
+
 
 tree = ET.parse(xmlfile)
 root = tree.getroot()

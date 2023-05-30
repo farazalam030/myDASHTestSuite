@@ -1,28 +1,41 @@
 #!/bin/sh
-
-# TARGET="\$TARGET"
-# DASH_CLI_VERSION=$(dashcli version)
-# PORT="\$PORT"
-# USER="\$USER"
-# PASSWORD="\$PASSWORD"
-# HTTP_PROTOCOL="\$HTTP_PROTOCOL"
-
+RMSLINK="http://rms.amd.com/#/builds/179850"
 TARGET="10.138.176.169"
-DASH_CLI_VERSION=$(dashcli version)
-PORT="623"
+PORT="664"
 USER="Administrator"
 PASSWORD="Realtek"
-HTTP_PROTOCOL="http"
-# DASHCMDTYPE="case"
+HTTP_PROTOCOL="https"
+BOARDNAME="CELADON"
+#CELADON dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t kvmredirection[0]
+#PHXBIG1  dashcli -v 1 -S https -C -a digest -h 10.138.169.37 -p 664 -u amd -P amd -t computersystem[0] user add user1 user1pass [UserCompany]
+#PHXSML1 dashcli -v 1 -S https -C -a digest -h 10.138.170.16 -p 664 -u amd -P amd -t computersystem[0] user add user1 user1pass [UserCompany]
+
+# echo "Enter Target IP: "
+# read TARGET
+# # TARGET
+
+# # DASH_CLI_VERSION
+# echo "Enter Port no.: "
+# read PORT
+
+# echo "Enter USER: "
+# read USER
+# echo "Enter PASSWORD :"
+# read PASSWORD
+
+# echo "Enter http/https wrt port no:"
+# read HTTP_PROTOCOL 
+DASH_CLI_VERSION=$(dashcli version)
 
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 #dashcli -v 1 -S http -C -a digest -h 10.138.176.169 -p 623 -u Administrator -P Realtek -t kvmredirection[1] startkvm
-echo "<log>"
+echo "<${BOARDNAME}LOG>"
 
 
 _run_cli() {
 
 	echo "<case> "
+	echo "RMSLINK = ${RMSLINK}"
 	_CMD="dashcli -v 1 -S $HTTP_PROTOCOL -C -a digest -h $TARGET -p $PORT -u $USER -P $PASSWORD $*"
 	echo "<version>"
 	echo "${DASH_CLI_VERSION}"
@@ -235,49 +248,59 @@ _test_misc() {
 	_run_cli -t ethernetport[0]
 	_run_cli -t kvmredirection[0]
 	_run_cli -t logentry[0]
-	_run_cli -t recordlog[0]
+# 	_run_cli -t recordlog[0]
 }
-OPT=$1
-if [ $# != 0 ]; then
-	if [[ $OPT == 'all' ]]; then 
-		_test_enumerate
-		_test_computersystem
-		_test_case0
-		_test_processor
-		_test_misc
-	elif  [[ $OPT == 'enumerate' ]]; then 
-		_test_enumerate
-		# echo "_test_enumerate"
-	elif  [[ $OPT == 'computersystem' ]]; then
-		_test_computersystem
-		# echo "_test_computersystem"
-	elif  [[ $OPT == 'case0'  ]];then
-		_test_case0
-		# echo "_test_case0"
-	elif  [[ $OPT == 'processor' ]];then
-		_test_processor
-		# echo "_test_processor"
-	elif  [[ $OPT == 'misc' ]];then
-		_test_misc
-		# echo "test_misc"
-	else 
-		echo "Pass Valid parameters as Follows"
-		echo "         (a) 'all' to run all cases"
-		echo "         (b) 'computersystem' to run all  computersystem cases"
-		echo "         (c) 'case0' to run all _test_case0 cases"
-		echo "         (d) 'enumerate' to run all _test_enumerate cases"
-		echo "         (e) 'processor' to run all _test_processor cases"
-		echo "         (f) 'misc' to run all _test_misc cases"
-	fi
-else 
-	echo "Pass Valid parameters as Follows"
-	echo "         (a) 'all' to run all cases"
-	echo "         (b) 'computersystem' to run all  computersystem cases"
-	echo "         (c) 'case0' to run all _test_case0 cases"
-	echo "         (d) 'enumerate' to run all _test_enumerate cases"
-	echo "         (e) 'processor' to run all _test_processor cases"
-	echo "         (f) 'misc' to run all _test_misc cases"
 
-fi
+# OPT=$1
+# echo $1
+# if [ $# != 0 ]; then
+# 	if [[ $OPT == 'all' ]]; then 
+# 		_test_enumerate
+# 		_test_computersystem
+# 		_test_case0
+# 		_test_processor
+# 		_test_misc
+# 	elif  [[ $OPT == 'enumerate' ]]; then 
+# 		_test_enumerate
+# 		# echo "_test_enumerate"
+# 	elif  [[ $OPT == 'computersystem' ]]; then
+# 		_test_computersystem
+# 		# echo "_test_computersystem"
+# 	elif  [[ $OPT == 'case0' ]];then
+# 		_test_case0
+# 		# echo "_test_case0"
+# 	elif  [[ $OPT == 'processor' ]];then
+# 		_test_processor
+# 		# echo "_test_processor"
+# 	elif  [[ $OPT == 'misc' ]];then
+# 		_test_misc
+# 		# echo "test_misc"
+# 	else 
+# 		echo "Pass Valid parameters as Follows"
+# 		echo "         (a) 'all' to run all cases"
+# 		echo "         (b) 'computersystem' to run all  computersystem cases"
+# 		echo "         (c) 'case0' to run all _test_case0 cases"
+# 		echo "         (d) 'enumerate' to run all _test_enumerate cases"
+# 		echo "         (e) 'processor' to run all _test_processor cases"
+# 		echo "         (f) 'misc' to run all _test_misc cases"
+# 	fi
+# else 
+# 	echo "Pass Valid parameters as Follows"
+# 	echo "         (a) 'all' to run all cases"
+# 	echo "         (b) 'computersystem' to run all  computersystem cases"
+# 	echo "         (c) 'case0' to run all _test_case0 cases"
+# 	echo "         (d) 'enumerate' to run all _test_enumerate cases"
+# 	echo "         (e) 'processor' to run all _test_processor cases"
+# 	echo "         (f) 'misc' to run all _test_misc cases"
 
-echo "</log>"
+# fi
+
+
+_test_enumerate
+_test_computersystem
+_test_case0
+_test_processor
+_test_misc
+
+
+echo "</${BOARDNAME}LOG>"
